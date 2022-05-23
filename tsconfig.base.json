@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@sigil-draw/react": ["libs/component/react/src/index.ts"],
+      "@sigil-draw/svg": ["libs/render/svg/src/index.ts"],
+      "@sigil-draw/zdog": ["libs/render/zdog/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

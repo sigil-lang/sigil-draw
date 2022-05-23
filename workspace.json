@@ -2,7 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "component-react": "libs/component/react",
     "for-web": "apps/for-web",
-    "for-web-e2e": "apps/for-web-e2e"
+    "for-web-e2e": "apps/for-web-e2e",
+    "render-svg": "libs/render/svg",
+    "render-zdog": "libs/render/zdog"
   }
 }

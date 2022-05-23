@@ -41,11 +41,40 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Library groups:
 
-> You can also use any of the plugins above to generate libraries as well.
+- `element` directory for SVG elements
+- `render` directory for scene rendering contexts
+- `component` directory for web framework components
 
 Libraries are shareable across libraries and applications. They can be imported from `@sigil-draw/mylib`.
+
+### React component scaffolding example
+
+Component library:
+```
+nx g @nrwl/react:library --publishable --style=scss --directory=component --importPath=@sigil-draw/react --name=react --dryRun
+```
+
+Add storybook to the library:
+```
+nx g @nrwl/react:storybook-configuration --configureCypress=false --generateCypressSpecs=false --generateStories=true --name=component-react --dryRun
+```
+
+Run the storybook:
+```
+nx run component-react:storybook
+```
+
+```
+nx g @nrwl/js:library --publishable --directory=render --importPath=@sigil-draw/svg --name=svg --dryRun
+```
+
+### Wishlist
+
+- [Zdog](https://zzz.dog/)
+- [Konva](https://konvajs.org)
+- [pixijs](https://pixijs.com)
 
 ## Development server
 
